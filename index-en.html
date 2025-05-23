@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Leonardo Silva de Sousa - Portfolio</title>
+  <style>
+	:root {
+		--bg-gradient: linear-gradient(to right, #ffffff, #e0e0e0);
+		--text-color: #000000;
+		--accent-color: #d62828;
+		--card-bg: rgba(255,255,255,0.7);
+}
+    body {
+      font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      margin: 0;
+      padding: 0;
+      background: var(--bg-gradient);
+      color: var(--text-color);
+      transition: all 0.3s ease;
+      scroll-behavior: smooth;
+    }
+    nav {
+      display: flex;
+      justify-content: center;
+      gap: 1.5rem;
+      background-color: rgba(0, 0, 0, 0.4);
+      padding: 1rem;
+      position: sticky;
+      top: 0;
+      z-index: 1000;
+    }
+    nav a {
+      color: var(--accent-color);
+      text-decoration: none;
+      font-weight: bold;
+    }
+    nav a:hover {
+      text-decoration: underline;
+    }
+    header {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      padding: 2rem;
+      background-color: var(--card-bg);
+      text-align: center;
+    }
+    header img {
+      width: 120px;
+      height: 120px;
+      object-fit: cover;
+      border-radius: 50%;
+      border: 3px solid var(--accent-color);
+    }
+    h1 {
+      margin: 1rem 0 0.2rem;
+      font-size: 2rem;
+      color: var(--accent-color);
+    }
+    main {
+      padding: 2rem;
+    }
+    section {
+      margin-bottom: 2rem;
+    }
+    h2 {
+      color: var(--accent-color);
+      border-bottom: 1px solid var(--accent-color);
+      padding-bottom: 0.5rem;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+    a:hover {
+      text-decoration: underline;
+    }
+    .tech-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(80px, 1fr));
+      gap: 1rem;
+      margin-top: 1rem;
+    }
+    .tech-item {
+      text-align: center;
+    }
+    .tech-item img {
+      width: 48px;
+      height: 48px;
+      margin-bottom: 0.5rem;
+    }
+    .toggle-mode {
+      margin-top: 1rem;
+      background: none;
+      border: 2px solid var(--accent-color);
+      color: var(--accent-color);
+      padding: 0.5rem 1rem;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background 0.3s;
+    }
+    .toggle-mode:hover {
+      background: var(--accent-color);
+      color: #141e30;
+    }
+    @media (min-width: 768px) {
+      header {
+        flex-direction: row;
+        justify-content: space-between;
+        text-align: left;
+      }
+      header div {
+        max-width: 70%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <a href="#sobre">Resume</a>
+	<a href="#formacao">Higher education</a>
+    <a href="#experiencia">Work experience</a>
+    <a href="#conhecimentos">Relevant knowledge</a>
+  </nav>
+
+  <header>
+    <img src="foto.jpeg" alt="Foto de Leonardo Silva de Sousa">
+    <div>
+      <h1>Leonardo Silva de Sousa</h1>
+      <p>Systems Analyst/Developer | Freelancer</p>
+      <p>Email: <a href="mailto:lsilvasousa00@gmail.com">lsilvasousa00@gmail.com</a> | <a href="https://www.linkedin.com/in/leonardo-silva-de-sousa-9b345715a/" target="_blank">LinkedIn</a></p>
+      <button class="toggle-mode" onclick="toggleLanguage()">Change language</button>
+    </div>
+  </header>
+
+  <main>
+    <section id="sobre">
+      <h2>Resume</h2>
+      <p>Hello, my name is Leonardo, I have a degree in Systems Analysis and Development, I graduated in 12/2019 and I intend to work in the area as a systems analyst and developer. In addition, I know and have developed projects using the following programming languages: PHP, Java and C#.</p>
+      <p>As for my professional experience, I started as an IT intern working with RIS/PACS, an
+		imaging diagnostic system at Albert Einstein Hospital. To date, I have 3 years of experience
+		with RIS and PACS hospital systems (2 years at PRORADIS) and 2 years working as a CCS
+		support analyst at JD Consultores, providing support in the CCS system (Customer
+		Registration in the Financial System). During my career, I worked and work in the technical
+		support area, having contact with customers, solving problems, answering users' questions
+		and providing training. As for communication tools, I have already used chat, telephone,
+		email and ticketing systems.</p>
+      <p>I am a results-oriented person, I always seek to establish paths to be followed until reaching
+		the final goal. I also appreciate assertiveness, always seeking objective and clear communication.</p>
+    </section>
+	
+	<section id="formacao">
+      <h2>Higher education</h2>
+      <p>School: FATEC Zona Sul - 02/2017 - 12/2019 <br/> Major / área of study: Systems Analysis and Development</p>
+    </section>
+
+    <section id="experiencia">
+      <h2>Work experience</h2>
+      <ul>
+        <li>JUD support analyst at JD Consultores – 12/2024 to current</li>
+        <li>CCS support analyst at JD Consultores – 12/2022 to 12/2024</li>
+        <li>Systems Support Analyst at PRORADIS – 11/2020 until 11/2022</li>
+        <li>IT Intern at Hospital Albert Einstein – 02/2019 until 12/2019</li>
+      </ul>
+    </section>
+
+    <section id="conhecimentos">
+      <h2>Relevant knowledge</h2>
+      <div class="tech-grid">
+        <div class="tech-item"><img src="icons/java.png" alt="Java"><div>Java</div></div>
+        <div class="tech-item"><img src="icons/csharp.png" alt="C#"><div>C#</div></div>
+        <div class="tech-item"><img src="icons/php.png" alt="PHP"><div>PHP</div></div>
+        <div class="tech-item"><img src="icons/python.png" alt="Python"><div>Python</div></div>
+        <div class="tech-item"><img src="icons/javascript.png" alt="JavaScript"><div>JavaScript</div></div>
+        <div class="tech-item"><img src="icons/html.png" alt="HTML"><div>HTML</div></div>
+        <div class="tech-item"><img src="icons/css.png" alt="CSS"><div>CSS</div></div>
+        <div class="tech-item"><img src="icons/mysql.png" alt="MySQL"><div>MySQL</div></div>
+        <div class="tech-item"><img src="icons/sqlserver.png" alt="SQL Server"><div>SQL Server</div></div>
+        <div class="tech-item"><img src="icons/oracle.png" alt="Oracle"><div>Oracle</div></div>
+		<div class="tech-item"><img src="icons/postgresql.png" alt="Postgresql"><div>PostgreSQL</div></div>
+        <div class="tech-item"><img src="icons/rabbitmq.png" alt="RabbitMQ"><div>RabbitMQ</div></div>
+        <div class="tech-item"><img src="icons/zabbix.png" alt="Zabbix"><div>Zabbix</div></div>
+        <div class="tech-item"><img src="icons/windows.png" alt="Windows"><div>Windows</div></div>
+        <div class="tech-item"><img src="icons/linux.png" alt="Linux"><div>Linux</div></div>
+      </div>
+    </section>
+  </main>
+
+  <script>
+  function toggleLanguage() {
+    const currentUrl = window.location.pathname;
+    if (currentUrl.includes('index-en.html')) {
+      window.location.href = 'index.html'; // volta para PT
+    } else {
+      window.location.href = 'index-en.html'; // vai para EN
+    }
+  }
+</script>
+</body>
+</html>
